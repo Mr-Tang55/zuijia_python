@@ -1,0 +1,1 @@
+default_app_config = "apps.Goods.apps.GoodsConfig"
