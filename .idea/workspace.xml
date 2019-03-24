@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="408f58a0-46ee-417b-b5f1-ab664ec289ec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/22.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/33.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,21 +27,11 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/Goods/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
+            <state relative-caret-position="1700">
               <caret line="80" column="17" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="17" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#169#821#0" />
-                <element signature="e#870#1429#0" />
                 <element signature="e#1353#1361#0" />
-                <element signature="e#2121#2823#0" />
-                <element signature="e#5699#6668#0" />
-                <element signature="e#4790#5712#0" />
-                <element signature="e#5767#6381#0" />
-                <element signature="e#6440#6714#0" />
-                <element signature="e#6349#6729#0" />
-                <element signature="e#6776#7133#0" />
-                <element signature="e#7178#7461#0" />
               </folding>
             </state>
           </provider>
@@ -47,7 +40,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/Goods/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="1050">
               <caret line="60" column="88" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="88" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -59,8 +52,8 @@
       <file leaf-file-name="serializer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/Goods/serializer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+            <state relative-caret-position="25">
+              <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -141,7 +134,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,6 +173,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -338,12 +331,10 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3206239" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32931036" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2676923" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32928944" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27384615" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="manage.py@zuijia" order="8" weight="0.5017241" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -352,32 +343,34 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="manage.py@zuijia" order="8" weight="0.5017241" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31896552" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2676923" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32931036" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31896552" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="manage.py@zuijia" order="13" weight="0.5017241" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32931036" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,9 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -611,9 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3900">
           <caret line="167" selection-start-line="167" selection-end-line="168" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -691,9 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -713,7 +697,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/Goods/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="1050">
           <caret line="60" column="88" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="88" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -723,21 +707,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/Goods/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
+        <state relative-caret-position="1700">
           <caret line="80" column="17" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="17" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#169#821#0" />
-            <element signature="e#870#1429#0" />
             <element signature="e#1353#1361#0" />
-            <element signature="e#2121#2823#0" />
-            <element signature="e#5699#6668#0" />
-            <element signature="e#4790#5712#0" />
-            <element signature="e#5767#6381#0" />
-            <element signature="e#6440#6714#0" />
-            <element signature="e#6349#6729#0" />
-            <element signature="e#6776#7133#0" />
-            <element signature="e#7178#7461#0" />
           </folding>
         </state>
       </provider>
@@ -751,8 +725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/Goods/serializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+        <state relative-caret-position="25">
+          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
