@@ -127,7 +127,7 @@ class Goods_category(models.Model):
     def __str__(self):
         return self.goods.name
 
-#商品参数表二参数名
+#商品规格key表
 class Spec_param(models.Model):
     cid = models.ForeignKey(GoodsCategory, verbose_name='商品所属分类id')
     name = models.CharField(max_length=255,verbose_name='参数名')
@@ -141,13 +141,13 @@ class Spec_param(models.Model):
     add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")
 
     class Meta:
-        verbose_name = "规格参数组下的参数名"
+        verbose_name = "商品规格key表"
         verbose_name_plural = verbose_name
 
     def __str__(self):
         return self.cid.name + "_" + self.name
 
-#商品参数表三参数值
+#商品规格value表
 class Spec_param_value(models.Model):
     spec_param_id = models.ForeignKey(Spec_param,verbose_name='参数名')
     value = models.CharField(max_length=255,verbose_name='参数值')
@@ -157,15 +157,17 @@ class Spec_param_value(models.Model):
 
 
     class Meta:
-        verbose_name = "商品参数表_参数值"
+        verbose_name = "商品规格value表"
         verbose_name_plural = verbose_name
 
     def __str__(self):
         return self.spec_param_id.name + "_" + self.value
 
+
+#商品参数与商品详情关联表，这样设置是为了保持商品参数与商品详情关联表灵活性，可以随意配置
 class Spec_param_value_To_Goods_category (models.Model):
-    spec_param_value_id = models.ForeignKey(Spec_param_value)
-    goods_category = models.ForeignKey(Goods_category)
+    spec_param_value_id = models.ForeignKey(Spec_param_value,verbose_name='关联的规格参数表')
+    goods_category = models.ForeignKey(Goods_category,verbose_name='关联的所属商品表')
 
     class Meta:
         verbose_name = "商品参数与商品详情关联表"

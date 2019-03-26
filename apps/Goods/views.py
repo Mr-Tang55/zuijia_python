@@ -5,6 +5,8 @@ from rest_framework.viewsets import ViewSetMixin
 from django.db.models.query import QuerySet
 from rest_framework .views import APIView
 from rest_framework.response import Response
+from rest_framework.viewsets import GenericViewSet
+from rest_framework import mixins
 from rest_framework.mixins import *
 from django_filters.rest_framework import DjangoFilterBackend #过滤模块
 from rest_framework import filters  #搜索模块
@@ -72,9 +74,6 @@ class Index(CacheResponseMixin,ViewSetMixin,APIView):
         except Exception as e:
             ret = {'code':101,'error':'数据获取失败'}
             return Response(ret)
-
-from rest_framework.viewsets import GenericViewSet
-from rest_framework import mixins
 
 class Style(GenericViewSet,mixins.ListModelMixin,):
     queryset = Goods.objects.all()

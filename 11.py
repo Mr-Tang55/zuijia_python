@@ -20,3 +20,6 @@
 # h = {5:6}
 # a = {s,g,h}
 # print(a)
+
+a ="style.name"
+print(a.split("."))
