@@ -85,12 +85,13 @@ WSGI_APPLICATION = 'zuijia.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+#请设置自己的mysql地址
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': "zuijia",
         'USER': 'root',
-        'PASSWORD': "si5505005",
+        'PASSWORD': "root",
         'HOST': "127.0.0.1",
         "OPTIONS": {"init_command": "SET default_storage_engine=INNODB;"}
     },
@@ -150,10 +151,13 @@ CKEDITOR_IMAGE_BACKEND = 'pillow'  #生成缩列图
 # 设置django缓存存放位置为redis数据库,并设置一个默认(default)选项,在redis中(配置文件/etc/redis/redis.conf)开启了RDB持久化储存
 # pip install django-redis, 然后在视图中可以通过 from django_redis import get_redis_connection 这个方法和redis数据库进行连接
 #缓存设置
+
+
+#请设置自己的缓存redis
 CACHES = {
     "default": {
             "BACKEND": "django_redis.cache.RedisCache",
-            "LOCATION": "redis://139.199.80.154",
+            "LOCATION": "redis/:/255.255.255.255",
             "OPTIONS": {
                 "CLIENT_CLASS": "django_redis.client.DefaultClient",
                 'CONNECTION_POOL_KWARGS': {"max_connections": 1000},
