@@ -61,6 +61,9 @@ class img_Serializers(serializers.ModelSerializer):
         model=GoodsImages
         fields = ("images",)
 
+# class Goods_Serializers(serializers.Serializer):
+#     test=serializers.CharField(source="style.name")
+
 
 class Goods_Serializers(serializers.ModelSerializer):
     img =serializers.SerializerMethodField()
@@ -72,9 +75,8 @@ class Goods_Serializers(serializers.ModelSerializer):
     def get_img(self, obj):
         queryset = obj.id
         img_obj =GoodsImages.objects.filter(id=queryset,is_imagesis=True).first()
-        print(img_obj)
         if img_obj:
-            img = img_Serializers(instance=img_obj,many=False,)
+            img = img_Serializers(instance=img_obj,many=False,context={'request': self.context['request']})
             return img.data
         return None
 

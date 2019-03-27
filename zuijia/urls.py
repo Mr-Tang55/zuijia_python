@@ -37,8 +37,15 @@ urlpatterns = [
     url(r'^admin/',  include(xadmin.site.urls)),
     url(r'^api-auth/', include('rest_framework.urls',namespace='api-auth')),
     url(r'^docs/', include_docs_urls(title='最家家具')),
+    #首页
     url(r'^index/', Index.as_view({'get':'list'}),name='index'),
-    url(r'^style/(?P<pk>\d+)/$', Style.as_view({'get':'list'}),name='style'),
+    # 装饰风格类别页
+    url(r'^index/', Index.as_view({'get': 'list'}), name='index'),
+    # 装饰风格商品展示数据
+    url(r'^Style_goods/(?P<pk>\d+)/$', Style.as_view({'get': 'list'}), name='style'),
+    #商品类别页
+    url(r'^category/', Category.as_view({'get': 'list'}), name='category'),
+
     url(r'', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #没有这一句无法显示上传的图片
 

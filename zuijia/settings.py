@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'xadmin',         #xadmin
     'crispy_forms',   #xadmin依赖包
     'reversion',  #xadmin依赖包
+    'django_filters',  #filter过滤器
 
 ]
 
@@ -165,6 +166,13 @@ CACHES = {
  #CacheResponseMixin设置缓存时间
 REST_FRAMEWORK_EXTENSIONS = {
     'DEFAULT_CACHE_RESPONSE_TIMEOUT': 60 * 15,
+}
+
+REST_FRAMEWORK = {
+# # 分页显示
+# 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination', 'PAGE_SIZE': 10,
+# 配置过滤
+'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
 }
 
 

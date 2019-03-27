@@ -64,8 +64,8 @@ class Goods(models.Model):
     category = models.ForeignKey(GoodsCategory, verbose_name='所属类别', related_name='Goods_and_GoodsCategory')
     style = models.ForeignKey(GoodsStyle, verbose_name="所属装饰风格", related_name="goodsstyle", null=True,
                               blank=True)
-    price = models.FloatField(verbose_name='价格',null=True, blank=True, help_text='不需要填写，由程序自动计算',)
-    sale = models.IntegerField(verbose_name='销售额', default=0)
+    price = models.FloatField(verbose_name='价格',null=True, blank=True, help_text='不需要填写，由程序自动计算',db_index = True)
+    sale = models.IntegerField(verbose_name='销售额', default=0,db_index = True)
     ship_free = models.BooleanField(default=True, verbose_name="是否承担运费")
     status = models.IntegerField(verbose_name='商品所属状态',choices=CATEGORY_TYPE)
     
