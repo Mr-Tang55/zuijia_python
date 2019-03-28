@@ -1,24 +1,23 @@
 import logging
 from django.db.models import F
-from rest_framework.viewsets import ViewSetMixin
+from rest_framework import mixins
+from rest_framework.mixins import *
+from rest_framework import filters      #搜索模块
 from django.db.models.query import QuerySet
 from rest_framework .views import APIView
 from rest_framework.response import Response
+from rest_framework.viewsets import ViewSetMixin
 from rest_framework.viewsets import GenericViewSet
-from rest_framework import mixins
-from rest_framework.mixins import *
 from django_filters.rest_framework import DjangoFilterBackend #过滤模块
-from rest_framework import filters  #搜索模块
-# Create your views here.
-from .models import *
-from .serializer import *
-from .filter import *
-# from units.drf_authentication import Auth
 from rest_framework_extensions.cache.mixins import CacheResponseMixin
 
 
-from units.Pagination import Goods_Pagination
+from .models import *
+from .filter import *
+from .serializer import *
 from units.filter import Goods_Filters
+from units.Pagination import Goods_Pagination
+
 
 
 
@@ -131,8 +130,8 @@ class Category(CacheResponseMixin,ViewSetMixin,APIView):
             return Response(ret)
 
 
-#装饰摆件二级页面
-class Two_zhuanshibianjiane(GenericViewSet,ListModelMixin):
+#装饰摆件,布艺软饰二级页面及所属的三级页面
+class Two_zhuanshibianjian(GenericViewSet,ListModelMixin):
     queryset = Goods.objects.filter()
     serializer_class = Goods_Serializers
     filter_backends = (DjangoFilterBackend,)
@@ -141,9 +140,19 @@ class Two_zhuanshibianjiane(GenericViewSet,ListModelMixin):
     def list(self, request, *args, **kwargs):
         ret = {"code": 100, "data": None}
         try:
-            #装饰摆件顶部推荐大图
-            top_img = Two_zhuanshibianjian_Large.objects.all().order_by("-add_time").first()
-            img_serializers = GoodsStyle_Serializers(instance=top_img, many=True, context={"request": request})
+            pk = self.kwargs.get('pk')
+
+            top_img = None
+            if int(pk) in [3,4,5]:
+                #装饰摆件顶部推荐大图
+                top_img = Two_zhuanshibianjian_Large.objects.all().order_by("-add_time")[:1]
+            elif int(pk) in [4,6,7]:
+                # 布艺软饰顶部推荐大图
+                top_img = Two_bupiruanshi_Large.objects.all().order_by("-add_time")[:1]
+            else:
+                ret = {"code": 103, 'error': '参数不正确'}
+                return Response(ret)
+            img_serializers = Idenx_shuixin_little_Serializers(instance=top_img, many=True, context={"request": request})
             goodsstyle = {"goodsstyle_serializers": img_serializers.data}
 
             #页面显示的商品
@@ -159,7 +168,7 @@ class Two_zhuanshibianjiane(GenericViewSet,ListModelMixin):
     def get_queryset(self):
         #将queryset的数据进行过滤
         pk = self.kwargs.get('pk')
-        queryset = self.queryset.filter(category=pk,status=1)
+        queryset = self.queryset.filter(category=pk,status=1)[:16]
         if isinstance(queryset, QuerySet):
             queryset = queryset.all()
         return queryset

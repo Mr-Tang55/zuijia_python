@@ -40,12 +40,15 @@ urlpatterns = [
     #首页
     url(r'^index/', Index.as_view({'get':'list'}),name='index'),
     # 装饰风格类别页
-    url(r'^index/', Index.as_view({'get': 'list'}), name='index'),
+    url(r'^style/', Style.as_view({'get': 'list'}), name='style'),
     # 装饰风格商品展示数据
-    url(r'^Style_goods/(?P<pk>\d+)/$', Style.as_view({'get': 'list'}), name='style'),
+    url(r'^StyleGoods/(?P<pk>\d+)/$', Style_goods.as_view({'get': 'list'}), name='StyleGoods'),
     #商品类别页
-    url(r'^category/', Category.as_view({'get': 'list'}), name='category'),
+    url(r'^category/$', Category.as_view({'get': 'list'}), name='category'),
+    #装饰摆件页面
+    url(r'^flowerDer/(?P<pk>\d+)/$', Two_zhuanshibianjian.as_view({'get': 'list'}), name='flowerDer'),
 
+    #富文本编辑器
     url(r'', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #没有这一句无法显示上传的图片
 
