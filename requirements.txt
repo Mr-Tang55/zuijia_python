@@ -51,6 +51,6 @@ urllib3==1.22
 virtualenv==16.0.0
 virtualenvwrapper-win==1.2.5
 w3lib==1.19.0
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 yarl==1.2.6
 zope.interface==4.5.0
